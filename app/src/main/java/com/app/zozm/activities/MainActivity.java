@@ -17,6 +17,7 @@ import android.widget.Toast;
 import com.app.zozm.R;
 import com.google.android.material.navigation.NavigationView;
 
+// pushing code form qazi ammar mac
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     DrawerLayout drawerLayout;
     View layertwo, layerthree, layerone;
