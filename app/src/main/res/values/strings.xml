@@ -1,5 +1,8 @@
 <resources>
-    <string name="app_name">ZOZM</string>
+    <string name="app_name">زوزم للطباعة</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="title">زوزم للطباعة</string>
+    <string name="ok1">موافق</string>
+    <string name="subtitlenet">هناك خطأ ما</string>
 </resources>
