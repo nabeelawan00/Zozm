@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_discovered"
+            android:title="Discover" />
+        <item
+            android:id="@+id/nav_autolisting"
+            android:title="Auto Listing" />
+        <item
+            android:id="@+id/nav_road_assisstant"
+            android:title="Road Assisstant" />
+        <item
+            android:id="@+id/nav_rental"
+            android:title="Auto Rental" />
+
+        <item
+            android:id="@+id/nav_insurance"
+            android:title="Auto Insurance" />
+
+        <item
+            android:id="@+id/nav_addservices"
+            android:title="Add Services" />
+
+        <item
+            android:id="@+id/nav_addproducts"
+            android:title="Add Products" />
+
+
+        <item
+            android:id="@+id/nav_service_provider"
+            android:title="Become a Service Provider" />
+
+    </group>
+</menu>
