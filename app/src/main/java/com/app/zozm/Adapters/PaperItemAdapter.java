@@ -32,7 +32,7 @@ public class PaperItemAdapter extends RecyclerView.Adapter<PaperItemAdapter.MyVi
 
     @Override
     public int getItemCount() {
-        return 0;
+        return 4;
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {

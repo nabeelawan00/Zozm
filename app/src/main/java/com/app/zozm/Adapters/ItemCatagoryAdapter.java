@@ -1,6 +1,7 @@
 package com.app.zozm.Adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.os.Build;
@@ -15,12 +16,14 @@ import androidx.annotation.RequiresApi;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.app.zozm.R;
+import com.app.zozm.activities.PaperItemActivity;
 
 public class ItemCatagoryAdapter extends RecyclerView.Adapter<ItemCatagoryAdapter.MyViewHolder> {
 
     Context mContext;
     int[] iconsArray;
     String[] itemname;
+
 
     public ItemCatagoryAdapter(Context mContext, int[] flags, String[] itemnames) {
         this.mContext = mContext;
@@ -37,7 +40,7 @@ public class ItemCatagoryAdapter extends RecyclerView.Adapter<ItemCatagoryAdapte
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
-    public void onBindViewHolder(@NonNull ItemCatagoryAdapter.MyViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ItemCatagoryAdapter.MyViewHolder holder, final int position) {
 
         holder.image.setImageResource(iconsArray[position]);
         holder.textView.setText(itemname[position]);
@@ -60,6 +63,53 @@ public class ItemCatagoryAdapter extends RecyclerView.Adapter<ItemCatagoryAdapte
         } else if (position == 7) {
             holder.view.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#696A2B")));
         }
+
+        holder.view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                switch (position) {
+                    case 0:
+
+                        Intent intent1 = new Intent(mContext, PaperItemActivity.class);
+                        mContext.startActivity(intent1);
+
+                        break;
+                    case 1:
+                        Intent intent2 = new Intent(mContext, PaperItemActivity.class);
+                        mContext.startActivity(intent2);
+                        break;
+                    case 2:
+                        Intent intent3 = new Intent(mContext, PaperItemActivity.class);
+                        mContext.startActivity(intent3);
+                        break;
+                    case 3:
+
+                        Intent intent4 = new Intent(mContext, PaperItemActivity.class);
+                        mContext.startActivity(intent4);
+                        break;
+                    case 4:
+
+                        Intent intent5 = new Intent(mContext, PaperItemActivity.class);
+                        mContext.startActivity(intent5);
+                        break;
+                    case 5:
+
+                        Intent intent6 = new Intent(mContext, PaperItemActivity.class);
+                        mContext.startActivity(intent6);
+                        break;
+                    case 6:
+
+                        Intent intent7 = new Intent(mContext, PaperItemActivity.class);
+                        mContext.startActivity(intent7);
+                        break;
+                    case 7:
+
+                        Intent intent8 = new Intent(mContext, PaperItemActivity.class);
+                        mContext.startActivity(intent8);
+                        break;
+                }
+            }
+        });
 
     }
 
