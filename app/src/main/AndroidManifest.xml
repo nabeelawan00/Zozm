@@ -10,7 +10,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.PaperItemActivity"></activity>
+        <activity android:name=".activities.EightCatagoryItemsActivity"></activity>
+        <activity android:name=".activities.SeventhCatagoryItemsActivity" />
+        <activity android:name=".activities.SixthCatagoryItemsActivity" />
+        <activity android:name=".activities.FifthCatagoryItemsActivity" />
+        <activity android:name=".activities.ForthCatagoryItemsActivity" />
+        <activity android:name=".activities.ThirdCatagoryItemsActivity" />
+        <activity android:name=".activities.SecondCatagoryItemsActivity2" />
+        <activity android:name=".activities.FirstCatagoryItemsActivity" />
+        <activity android:name=".activities.PaperItemActivity" />
         <activity android:name=".activities.SelectionActivity" />
         <activity android:name=".activities.OrderActivity" />
         <activity android:name=".activities.BankDetailActivity" />

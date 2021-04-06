@@ -77,35 +77,42 @@ public class ItemCatagoryAdapter extends RecyclerView.Adapter<ItemCatagoryAdapte
                         break;
                     case 1:
                         Intent intent2 = new Intent(mContext, PaperItemActivity.class);
+                        intent2.putExtra("check", "SecondCatagory");
                         mContext.startActivity(intent2);
                         break;
                     case 2:
                         Intent intent3 = new Intent(mContext, PaperItemActivity.class);
+                        intent3.putExtra("check", "thirdCatagory");
                         mContext.startActivity(intent3);
                         break;
                     case 3:
 
                         Intent intent4 = new Intent(mContext, PaperItemActivity.class);
+                        intent4.putExtra("check", "forthCatagory");
                         mContext.startActivity(intent4);
                         break;
                     case 4:
 
                         Intent intent5 = new Intent(mContext, PaperItemActivity.class);
+                        intent5.putExtra("check", "fithCatagory");
                         mContext.startActivity(intent5);
                         break;
                     case 5:
 
                         Intent intent6 = new Intent(mContext, PaperItemActivity.class);
+                        intent6.putExtra("check", "sixthCatagory");
                         mContext.startActivity(intent6);
                         break;
                     case 6:
 
                         Intent intent7 = new Intent(mContext, PaperItemActivity.class);
+                        intent7.putExtra("check", "FirstCatagory");
                         mContext.startActivity(intent7);
                         break;
                     case 7:
 
                         Intent intent8 = new Intent(mContext, PaperItemActivity.class);
+                        intent8.putExtra("check", "FirstCatagory");
                         mContext.startActivity(intent8);
                         break;
                 }
