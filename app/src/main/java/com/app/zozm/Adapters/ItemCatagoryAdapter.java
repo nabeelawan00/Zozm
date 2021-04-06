@@ -16,7 +16,15 @@ import androidx.annotation.RequiresApi;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.app.zozm.R;
+import com.app.zozm.activities.EightCatagoryItemsActivity;
+import com.app.zozm.activities.FifthCatagoryItemsActivity;
+import com.app.zozm.activities.FirstCatagoryItemsActivity;
+import com.app.zozm.activities.ForthCatagoryItemsActivity;
 import com.app.zozm.activities.PaperItemActivity;
+import com.app.zozm.activities.SecondCatagoryItemsActivity2;
+import com.app.zozm.activities.SeventhCatagoryItemsActivity;
+import com.app.zozm.activities.SixthCatagoryItemsActivity;
+import com.app.zozm.activities.ThirdCatagoryItemsActivity;
 
 public class ItemCatagoryAdapter extends RecyclerView.Adapter<ItemCatagoryAdapter.MyViewHolder> {
 
@@ -70,49 +78,43 @@ public class ItemCatagoryAdapter extends RecyclerView.Adapter<ItemCatagoryAdapte
                 switch (position) {
                     case 0:
 
-                        Intent intent1 = new Intent(mContext, PaperItemActivity.class);
-                        intent1.putExtra("check", "FirstCatagory");
+                        Intent intent1 = new Intent(mContext, FirstCatagoryItemsActivity.class);
                         mContext.startActivity(intent1);
 
                         break;
                     case 1:
-                        Intent intent2 = new Intent(mContext, PaperItemActivity.class);
-                        intent2.putExtra("check", "SecondCatagory");
+                        Intent intent2 = new Intent(mContext, SecondCatagoryItemsActivity2.class);
                         mContext.startActivity(intent2);
                         break;
                     case 2:
-                        Intent intent3 = new Intent(mContext, PaperItemActivity.class);
-                        intent3.putExtra("check", "thirdCatagory");
+                        Intent intent3 = new Intent(mContext, ThirdCatagoryItemsActivity.class);
+
                         mContext.startActivity(intent3);
                         break;
                     case 3:
 
-                        Intent intent4 = new Intent(mContext, PaperItemActivity.class);
-                        intent4.putExtra("check", "forthCatagory");
+                        Intent intent4 = new Intent(mContext, ForthCatagoryItemsActivity.class);
+
                         mContext.startActivity(intent4);
                         break;
                     case 4:
 
-                        Intent intent5 = new Intent(mContext, PaperItemActivity.class);
-                        intent5.putExtra("check", "fithCatagory");
+                        Intent intent5 = new Intent(mContext, FifthCatagoryItemsActivity.class);
                         mContext.startActivity(intent5);
                         break;
                     case 5:
 
-                        Intent intent6 = new Intent(mContext, PaperItemActivity.class);
-                        intent6.putExtra("check", "sixthCatagory");
+                        Intent intent6 = new Intent(mContext, SixthCatagoryItemsActivity.class);
                         mContext.startActivity(intent6);
                         break;
                     case 6:
 
-                        Intent intent7 = new Intent(mContext, PaperItemActivity.class);
-                        intent7.putExtra("check", "FirstCatagory");
+                        Intent intent7 = new Intent(mContext, SeventhCatagoryItemsActivity.class);
                         mContext.startActivity(intent7);
                         break;
                     case 7:
 
-                        Intent intent8 = new Intent(mContext, PaperItemActivity.class);
-                        intent8.putExtra("check", "FirstCatagory");
+                        Intent intent8 = new Intent(mContext, EightCatagoryItemsActivity.class);
                         mContext.startActivity(intent8);
                         break;
                 }
