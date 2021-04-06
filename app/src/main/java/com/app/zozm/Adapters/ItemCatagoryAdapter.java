@@ -71,6 +71,7 @@ public class ItemCatagoryAdapter extends RecyclerView.Adapter<ItemCatagoryAdapte
                     case 0:
 
                         Intent intent1 = new Intent(mContext, PaperItemActivity.class);
+                        intent1.putExtra("check", "FirstCatagory");
                         mContext.startActivity(intent1);
 
                         break;

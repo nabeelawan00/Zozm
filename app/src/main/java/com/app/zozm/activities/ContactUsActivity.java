@@ -36,7 +36,6 @@ public class ContactUsActivity extends AppCompatActivity {
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setHomeAsUpIndicator(upArrow);
 
-
     }
 
     @Override

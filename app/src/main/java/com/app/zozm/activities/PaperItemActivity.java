@@ -3,14 +3,19 @@ package com.app.zozm.activities;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.ViewCompat;
 import androidx.recyclerview.widget.DefaultItemAnimator;
+import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
+import android.util.TypedValue;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
@@ -23,6 +28,7 @@ public class PaperItemActivity extends AppCompatActivity {
     RecyclerView.LayoutManager mLayoutManager;
     RecyclerView recyclerView;
     PaperItemAdapter paperItemAdapter;
+    String check;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +49,10 @@ public class PaperItemActivity extends AppCompatActivity {
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setHomeAsUpIndicator(upArrow);
 
+        Intent intent = getIntent();
+
+        check = intent.getStringExtra("check");
+
         initilisationView();
 
     }
@@ -51,17 +61,117 @@ public class PaperItemActivity extends AppCompatActivity {
 
         recyclerView = findViewById(R.id.recyclerView);
 
-        mLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, true);
+        mLayoutManager = new GridLayoutManager(this, 4);
+        recyclerView.setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
+        recyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(mLayoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
 
-        setItemAdatper();
+        if (check.equals("FirstCatagory")) {
+            final String firstCatagoryItems[] = {
+                    "10بوك",
+                    "20بوك",
+                    "50بوك",
+                    "100بوك",
+                    "ملصقات وإعلانات",
+                    "ورق مراسلات",
+                    "شهادات ودروع",
+                    "بروشور أو مطوم"
+            };
+
+            setItemAdatper(firstCatagoryItems);
+
+        } else if (check.equals("SecondCatagory")) {
+
+            final String items[] = {
+                    "سند قبض",
+                    "سند لأمر",
+                    "عقد إيجار",
+                    "عقد بيع",
+                    "عقد شراء",
+                    "عرض سمر",
+                    "عقد عمل",
+                    "عقد مقاولات",
+                    "مسير رواتب",
+                    "دفتر يومية",
+                    "محضر",
+                    "كمبيالة",
+                    "10 بوك",
+                    "25 بوك",
+                    "50 بوك",
+                    "100 بوك"
+            };
+
+            setItemAdatper(items);
+
+        } else if (check.equals("thirdCatagory")) {
+
+            final String items[] = {
+                    "10 كرتون",
+                    "20 كرتون",
+                    "40 كرتون",
+                    "50 كرتون",
+                    "أصل وصورة",
+                    "أصل وصورتان",
+                    "أصل و 3 صور",
+                    "أصل و 4 صور",
+                    "لون واحد",
+                    "الونان",
+                    "3 ألوان",
+                    "4 ألوان"
+            };
+
+            setItemAdatper(items);
+
+        } else if (check.equals("forthCatagory")) {
+
+            final String items[] = {
+                    "10كرت شخصي",
+                    "كرت زواج",
+                    "دعوة خاصة",
+                    "بطاقة تعريفموظف",
+                    "500",
+                    "1000",
+                    "2000",
+                    "3000",
+                    "وجه",
+                    "وجهين"
+            };
+
+            setItemAdatper(items);
+
+        } else if (check.equals("fithCatagory")) {
+
+            final String items[] = {
+                    "10 كرتون",
+                    "20 كرتون",
+                    "40 كرتون",
+                    "50 كرتون",
+                    "أصل وصورة",
+                    "أصل وصورتان",
+                    "أصل و 3 صور",
+                    "أصل و 4 صور",
+                    "لون واحد",
+                    "الونان",
+                    "3 ألوان",
+                    "4 ألوان"
+            };
+
+            setItemAdatper(items);
+
+        } else if (check.equals("sixthCatagory")) {
+
+        } else if (check.equals("sevenCatagory")) {
+
+        } else {
+
+        }
 
     }
 
-    private void setItemAdatper() {
-        paperItemAdapter = new PaperItemAdapter(this);
+    private void setItemAdatper(String[] items) {
+        paperItemAdapter = new PaperItemAdapter(this, items);
         recyclerView.setAdapter(paperItemAdapter);
     }
 
