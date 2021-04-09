@@ -1,16 +1,13 @@
 package com.app.zozm.activities;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import android.graphics.PorterDuff;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -21,6 +18,7 @@ public class OrderActivity extends AppCompatActivity implements View.OnClickList
     Button button;
     EditText name, phone;
     TextView tvOne, tvTwo, tvThree, tvFour;
+    ImageView backArrow;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,22 +27,20 @@ public class OrderActivity extends AppCompatActivity implements View.OnClickList
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         TextView mTitle = (TextView) findViewById(R.id.textView11);
-
-        setSupportActionBar(toolbar);
-        mTitle.setText("أكمل الطلب");
-
         getSupportActionBar().setDisplayShowTitleEnabled(false);
 
-        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
-        getSupportActionBar().setElevation(0);
-        final Drawable upArrow = getResources().getDrawable(R.drawable.abc_ic_ab_back_material);
-        upArrow.setColorFilter(getResources().getColor(R.color.colorDarkGray), PorterDuff.Mode.SRC_ATOP);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setHomeButtonEnabled(true);
-        getSupportActionBar().setHomeAsUpIndicator(upArrow);
+        backArrow = findViewById(R.id.imageView15);
+        setSupportActionBar(toolbar);
+        mTitle.setText("أكمل الطلب");
+        backArrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
 
         initilisationViews();
-        
+
     }
 
     private void initilisationViews() {
@@ -54,8 +50,8 @@ public class OrderActivity extends AppCompatActivity implements View.OnClickList
         tvThree = findViewById(R.id.tv_three);
         tvFour = findViewById(R.id.tv_four);
 
-        button = findViewById(R.id.button);
-        name = findViewById(R.id.ed_name);
+        button = findViewById(R.id.btn_order);
+        name = findViewById(R.id.editTextTextPersonName);
         phone = findViewById(R.id.ed_phone);
 
         button.setOnClickListener(this);
@@ -63,15 +59,9 @@ public class OrderActivity extends AppCompatActivity implements View.OnClickList
     }
 
     @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        onBackPressed();
-        return super.onOptionsItemSelected(item);
-    }
-
-    @Override
     public void onClick(View view) {
         switch (view.getId()) {
-            case R.id.button:
+            case R.id.btn_order:
 
                 if (!name.getText().toString().isEmpty()) {
                     if (!phone.getText().toString().isEmpty()) {

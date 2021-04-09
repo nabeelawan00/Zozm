@@ -9,11 +9,14 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.app.zozm.R;
 
 public class TermConditionActivity extends AppCompatActivity {
+
+    ImageView backarrow;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,23 +28,16 @@ public class TermConditionActivity extends AppCompatActivity {
 
         setSupportActionBar(toolbar);
         mTitle.setText("إتفاقية الاستخدام");
-
+        backarrow = findViewById(R.id.imageView15);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
 
-        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
-        getSupportActionBar().setElevation(0);
-        final Drawable upArrow = getResources().getDrawable(R.drawable.abc_ic_ab_back_material);
-        upArrow.setColorFilter(getResources().getColor(R.color.colorDarkGray), PorterDuff.Mode.SRC_ATOP);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setHomeButtonEnabled(true);
-        getSupportActionBar().setHomeAsUpIndicator(upArrow);
-
+        backarrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
 
     }
 
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        onBackPressed();
-        return super.onOptionsItemSelected(item);
-    }
 }

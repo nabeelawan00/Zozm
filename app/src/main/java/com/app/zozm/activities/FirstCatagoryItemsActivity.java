@@ -1,11 +1,11 @@
 package com.app.zozm.activities;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,6 +17,8 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class FirstCatagoryItemsActivity extends AppCompatActivity {
+
+    boolean one = true, two = true, three = true, four = true, five = true, six = true, seavon = true, eight = true, nine = true, ten = true, eleven = true, tewelve = true, tera = true, choda = true, panda = true, solla = true;
 
     @BindView(R.id.tv_one)
     TextView tvOne;
@@ -52,6 +54,8 @@ public class FirstCatagoryItemsActivity extends AppCompatActivity {
     TextView tvSolla;
     @BindView(R.id.button2)
     Button button2;
+    @BindView(R.id.imageView15)
+    ImageView imageView15;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,69 +72,252 @@ public class FirstCatagoryItemsActivity extends AppCompatActivity {
         switch (view.getId()) {
             case R.id.tv_one:
 
-                tvOne.getBackground().setColorFilter(getResources().getColor(R.color.colorPrimary),
-                        PorterDuff.Mode.SRC_ATOP);
+                if (one) {
+                    tvOne.getBackground().setColorFilter(getResources().getColor(R.color.colorPrimary),
+                            PorterDuff.Mode.SRC_ATOP);
+                    one = false;
+                } else {
+
+                    tvOne.getBackground().setColorFilter(getResources().getColor(R.color.colorGray),
+                            PorterDuff.Mode.SRC_ATOP);
+                    one = true;
+
+                }
 
                 break;
             case R.id.tv_two:
-                tvTwo.getBackground().setColorFilter(getResources().getColor(R.color.colorPrimary),
-                        PorterDuff.Mode.SRC_ATOP);
+
+                if (two) {
+                    tvTwo.getBackground().setColorFilter(getResources().getColor(R.color.colorPrimary),
+                            PorterDuff.Mode.SRC_ATOP);
+                    two = false;
+                } else {
+
+                    tvTwo.getBackground().setColorFilter(getResources().getColor(R.color.colorGray),
+                            PorterDuff.Mode.SRC_ATOP);
+                    two = true;
+
+                }
+
                 break;
             case R.id.tv_three:
-                tvThree.getBackground().setColorFilter(getResources().getColor(R.color.colorPrimary),
-                        PorterDuff.Mode.SRC_ATOP);
+
+
+                if (three) {
+                    tvThree.getBackground().setColorFilter(getResources().getColor(R.color.colorPrimary),
+                            PorterDuff.Mode.SRC_ATOP);
+                    three = false;
+                } else {
+
+                    tvThree.getBackground().setColorFilter(getResources().getColor(R.color.colorGray),
+                            PorterDuff.Mode.SRC_ATOP);
+                    three = true;
+
+                }
+
                 break;
             case R.id.tv_four:
-                tvFour.getBackground().setColorFilter(getResources().getColor(R.color.colorPrimary),
-                        PorterDuff.Mode.SRC_ATOP);
+                if (four) {
+                    tvFour.getBackground().setColorFilter(getResources().getColor(R.color.colorPrimary),
+                            PorterDuff.Mode.SRC_ATOP);
+                    four = false;
+                } else {
+
+                    tvFour.getBackground().setColorFilter(getResources().getColor(R.color.colorGray),
+                            PorterDuff.Mode.SRC_ATOP);
+                    four = true;
+
+                }
                 break;
             case R.id.tv_five:
-                tvFive.getBackground().setColorFilter(getResources().getColor(R.color.colorPrimary),
-                        PorterDuff.Mode.SRC_ATOP);
+
+                if (five) {
+                    tvFive.getBackground().setColorFilter(getResources().getColor(R.color.colorPrimary),
+                            PorterDuff.Mode.SRC_ATOP);
+                    five = false;
+                } else {
+
+                    tvFive.getBackground().setColorFilter(getResources().getColor(R.color.colorGray),
+                            PorterDuff.Mode.SRC_ATOP);
+                    five = true;
+
+                }
+
                 break;
             case R.id.tv_six:
-                tvSix.getBackground().setColorFilter(getResources().getColor(R.color.colorPrimary),
-                        PorterDuff.Mode.SRC_ATOP);
+
+                if (six) {
+                    tvSix.getBackground().setColorFilter(getResources().getColor(R.color.colorPrimary),
+                            PorterDuff.Mode.SRC_ATOP);
+                    six = false;
+                } else {
+
+                    tvSix.getBackground().setColorFilter(getResources().getColor(R.color.colorGray),
+                            PorterDuff.Mode.SRC_ATOP);
+                    six = true;
+
+                }
+
+
                 break;
             case R.id.tv_seven:
-                tvSeven.getBackground().setColorFilter(getResources().getColor(R.color.colorPrimary),
-                        PorterDuff.Mode.SRC_ATOP);
+
+                if (seavon) {
+                    tvSeven.getBackground().setColorFilter(getResources().getColor(R.color.colorPrimary),
+                            PorterDuff.Mode.SRC_ATOP);
+                    seavon = false;
+                } else {
+
+                    tvSeven.getBackground().setColorFilter(getResources().getColor(R.color.colorGray),
+                            PorterDuff.Mode.SRC_ATOP);
+                    seavon = true;
+
+                }
+
+
                 break;
             case R.id.tv_eight:
-                tvEight.getBackground().setColorFilter(getResources().getColor(R.color.colorPrimary),
-                        PorterDuff.Mode.SRC_ATOP);
+
+
+                if (eight) {
+                    tvEight.getBackground().setColorFilter(getResources().getColor(R.color.colorPrimary),
+                            PorterDuff.Mode.SRC_ATOP);
+                    eight = false;
+                } else {
+
+                    tvEight.getBackground().setColorFilter(getResources().getColor(R.color.colorGray),
+                            PorterDuff.Mode.SRC_ATOP);
+                    eight = true;
+
+                }
+
                 break;
             case R.id.tv_nine:
-                tvNine.getBackground().setColorFilter(getResources().getColor(R.color.colorPrimary),
-                        PorterDuff.Mode.SRC_ATOP);
+
+                if (nine) {
+                    tvNine.getBackground().setColorFilter(getResources().getColor(R.color.colorPrimary),
+                            PorterDuff.Mode.SRC_ATOP);
+                    nine = false;
+                } else {
+
+                    tvNine.getBackground().setColorFilter(getResources().getColor(R.color.colorGray),
+                            PorterDuff.Mode.SRC_ATOP);
+                    nine = true;
+
+                }
+
+
                 break;
+
+
             case R.id.tv_ten:
-                tvTen.getBackground().setColorFilter(getResources().getColor(R.color.colorPrimary),
-                        PorterDuff.Mode.SRC_ATOP);
+
+                if (ten) {
+                    tvTen.getBackground().setColorFilter(getResources().getColor(R.color.colorPrimary),
+                            PorterDuff.Mode.SRC_ATOP);
+                    ten = false;
+                } else {
+
+                    tvTen.getBackground().setColorFilter(getResources().getColor(R.color.colorGray),
+                            PorterDuff.Mode.SRC_ATOP);
+                    ten = true;
+
+                }
+
                 break;
             case R.id.tv_eleven:
-                tvEleven.getBackground().setColorFilter(getResources().getColor(R.color.colorPrimary),
-                        PorterDuff.Mode.SRC_ATOP);
+
+                if (eleven) {
+                    tvEleven.getBackground().setColorFilter(getResources().getColor(R.color.colorPrimary),
+                            PorterDuff.Mode.SRC_ATOP);
+                    eleven = false;
+                } else {
+
+                    tvEleven.getBackground().setColorFilter(getResources().getColor(R.color.colorGray),
+                            PorterDuff.Mode.SRC_ATOP);
+                    eleven = true;
+
+                }
+
                 break;
             case R.id.tv_tewelve:
-                tvTewelve.getBackground().setColorFilter(getResources().getColor(R.color.colorPrimary),
-                        PorterDuff.Mode.SRC_ATOP);
+
+
+                if (tewelve) {
+                    tvTewelve.getBackground().setColorFilter(getResources().getColor(R.color.colorPrimary),
+                            PorterDuff.Mode.SRC_ATOP);
+                    tewelve = false;
+                } else {
+
+                    tvTewelve.getBackground().setColorFilter(getResources().getColor(R.color.colorGray),
+                            PorterDuff.Mode.SRC_ATOP);
+                    tewelve = true;
+
+                }
+
                 break;
             case R.id.tv_tera:
-                tvTera.getBackground().setColorFilter(getResources().getColor(R.color.colorPrimary),
-                        PorterDuff.Mode.SRC_ATOP);
+
+
+                if (tera) {
+                    tvTera.getBackground().setColorFilter(getResources().getColor(R.color.colorPrimary),
+                            PorterDuff.Mode.SRC_ATOP);
+                    tera = false;
+                } else {
+
+                    tvTera.getBackground().setColorFilter(getResources().getColor(R.color.colorGray),
+                            PorterDuff.Mode.SRC_ATOP);
+                    tera = true;
+
+                }
+
                 break;
             case R.id.tv_choda:
-                tvChoda.getBackground().setColorFilter(getResources().getColor(R.color.colorPrimary),
-                        PorterDuff.Mode.SRC_ATOP);
+
+
+                if (choda) {
+                    tvChoda.getBackground().setColorFilter(getResources().getColor(R.color.colorPrimary),
+                            PorterDuff.Mode.SRC_ATOP);
+                    choda = false;
+                } else {
+
+                    tvChoda.getBackground().setColorFilter(getResources().getColor(R.color.colorGray),
+                            PorterDuff.Mode.SRC_ATOP);
+                    choda = true;
+
+                }
+
                 break;
             case R.id.tv_pandra:
-                tvPandra.getBackground().setColorFilter(getResources().getColor(R.color.colorPrimary),
-                        PorterDuff.Mode.SRC_ATOP);
+
+                if (panda) {
+                    tvPandra.getBackground().setColorFilter(getResources().getColor(R.color.colorPrimary),
+                            PorterDuff.Mode.SRC_ATOP);
+                    panda = false;
+                } else {
+
+                    tvPandra.getBackground().setColorFilter(getResources().getColor(R.color.colorGray),
+                            PorterDuff.Mode.SRC_ATOP);
+                    panda = true;
+
+                }
+
                 break;
             case R.id.tv_solla:
-                tvSolla.getBackground().setColorFilter(getResources().getColor(R.color.colorPrimary),
-                        PorterDuff.Mode.SRC_ATOP);
+
+
+                if (solla) {
+                    tvSolla.getBackground().setColorFilter(getResources().getColor(R.color.colorPrimary),
+                            PorterDuff.Mode.SRC_ATOP);
+                    solla = false;
+                } else {
+
+                    tvSolla.getBackground().setColorFilter(getResources().getColor(R.color.colorGray),
+                            PorterDuff.Mode.SRC_ATOP);
+                    solla = true;
+
+                }
+
                 break;
             case R.id.button2:
 
@@ -139,5 +326,10 @@ public class FirstCatagoryItemsActivity extends AppCompatActivity {
 
                 break;
         }
+    }
+
+    @OnClick(R.id.imageView15)
+    public void onClick() {
+        onBackPressed();
     }
 }

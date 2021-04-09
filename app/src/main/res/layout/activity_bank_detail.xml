@@ -32,31 +32,18 @@
         app:layout_constraintStart_toStartOf="@+id/toolbar"
         app:layout_constraintTop_toTopOf="@+id/toolbar" />
 
-    <ImageView
-        android:id="@+id/imageView12"
-        android:layout_width="0dp"
-        android:layout_height="120dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="70dp"
-        android:layout_marginEnd="8dp"
-        android:scaleType="fitXY"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar"
-        app:srcCompat="@drawable/bank_name" />
-
     <View
         android:id="@+id/view7"
         android:layout_width="0dp"
-        android:layout_height="228dp"
+        android:layout_height="355dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/round_button"
         android:backgroundTint="@color/colorPrimary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView12" />
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
     <TextView
         android:id="@+id/textView13"
@@ -129,7 +116,7 @@
         android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="@+id/view7"
         app:layout_constraintStart_toStartOf="@+id/view7"
-        app:layout_constraintTop_toBottomOf="@+id/textView16" />
+        app:layout_constraintTop_toBottomOf="@+id/textView23" />
 
 
     <TextView
@@ -145,6 +132,72 @@
         app:layout_constraintEnd_toEndOf="@+id/view7"
         app:layout_constraintStart_toStartOf="@+id/view7"
         app:layout_constraintTop_toBottomOf="@+id/textView17" />
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/cairo_semibold"
+        android:gravity="center"
+        android:textColor="@color/colorWhite"
+        android:textSize="15sp"
+        android:text="رقم حساب مطابع زوزم في مصرف الراجحي"
+        app:layout_constraintEnd_toEndOf="@+id/view7"
+        app:layout_constraintStart_toStartOf="@+id/view7"
+        app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="6113252149940"
+        android:fontFamily="@font/cairo_semibold"
+        android:gravity="center"
+        android:textColor="@color/colorWhite"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/view7"
+        app:layout_constraintStart_toStartOf="@+id/view7"
+        app:layout_constraintTop_toBottomOf="@+id/textView20" />
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="الأيبان"
+        android:fontFamily="@font/cairo_semibold"
+        android:gravity="center"
+        android:textColor="@color/colorWhite"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/view7"
+        app:layout_constraintStart_toStartOf="@+id/view7"
+        app:layout_constraintTop_toBottomOf="@+id/textView21" />
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="SA9120000006113252149940"
+        android:fontFamily="@font/cairo_semibold"
+        android:gravity="center"
+        android:textColor="@color/colorWhite"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/view7"
+        app:layout_constraintStart_toStartOf="@+id/view7"
+        app:layout_constraintTop_toBottomOf="@+id/textView22" />
+
+    <ImageView
+        android:id="@+id/imageView15"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+        app:layout_constraintStart_toStartOf="@+id/toolbar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back_arrow" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
