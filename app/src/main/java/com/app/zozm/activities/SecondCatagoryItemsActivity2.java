@@ -12,11 +12,18 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.app.zozm.R;
 
+import java.util.ArrayList;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class SecondCatagoryItemsActivity2 extends AppCompatActivity {
+
+    ArrayList<String> firstArray;
+    ArrayList<String> secondArray;
+    ArrayList<String> thirdArray;
+    ArrayList<String> forthArray;
 
     boolean one = true, two = true, three = true, four = true, five = true, six = true, seavon = true, eight = true, nine = true, ten = true, eleven = true, tewelve = true, tera = true, choda = true, panda = true, solla = true;
 
@@ -61,6 +68,12 @@ public class SecondCatagoryItemsActivity2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second_catagory_items2);
+
+        firstArray = new ArrayList<>();
+        secondArray = new ArrayList<>();
+        thirdArray = new ArrayList<>();
+        forthArray = new ArrayList<>();
+
         ButterKnife.bind(this);
     }
 
@@ -73,10 +86,12 @@ public class SecondCatagoryItemsActivity2 extends AppCompatActivity {
                     tvOne.getBackground().setColorFilter(getResources().getColor(R.color.colorPrimary),
                             PorterDuff.Mode.SRC_ATOP);
                     one = false;
+                    firstArray.add(tvOne.getText().toString());
                 } else {
 
                     tvOne.getBackground().setColorFilter(getResources().getColor(R.color.colorGray),
                             PorterDuff.Mode.SRC_ATOP);
+                    firstArray.remove(tvOne.getText().toString());
                     one = true;
 
                 }
@@ -88,11 +103,13 @@ public class SecondCatagoryItemsActivity2 extends AppCompatActivity {
                     tvTwo.getBackground().setColorFilter(getResources().getColor(R.color.colorPrimary),
                             PorterDuff.Mode.SRC_ATOP);
                     two = false;
+                    firstArray.add(tvTwo.getText().toString());
                 } else {
 
                     tvTwo.getBackground().setColorFilter(getResources().getColor(R.color.colorGray),
                             PorterDuff.Mode.SRC_ATOP);
                     two = true;
+                    firstArray.remove(tvTwo.getText().toString());
 
                 }
 
@@ -104,11 +121,13 @@ public class SecondCatagoryItemsActivity2 extends AppCompatActivity {
                     tvThree.getBackground().setColorFilter(getResources().getColor(R.color.colorPrimary),
                             PorterDuff.Mode.SRC_ATOP);
                     three = false;
+                    firstArray.add(tvThree.getText().toString());
                 } else {
 
                     tvThree.getBackground().setColorFilter(getResources().getColor(R.color.colorGray),
                             PorterDuff.Mode.SRC_ATOP);
                     three = true;
+                    firstArray.remove(tvThree.getText().toString());
 
                 }
 
@@ -118,11 +137,13 @@ public class SecondCatagoryItemsActivity2 extends AppCompatActivity {
                     tvFour.getBackground().setColorFilter(getResources().getColor(R.color.colorPrimary),
                             PorterDuff.Mode.SRC_ATOP);
                     four = false;
+                    firstArray.add(tvFour.getText().toString());
                 } else {
 
                     tvFour.getBackground().setColorFilter(getResources().getColor(R.color.colorGray),
                             PorterDuff.Mode.SRC_ATOP);
                     four = true;
+                    firstArray.remove(tvFour.getText().toString());
 
                 }
                 break;
@@ -132,11 +153,13 @@ public class SecondCatagoryItemsActivity2 extends AppCompatActivity {
                     tvFive.getBackground().setColorFilter(getResources().getColor(R.color.colorPrimary),
                             PorterDuff.Mode.SRC_ATOP);
                     five = false;
+                    secondArray.add(tvFive.getText().toString());
                 } else {
 
                     tvFive.getBackground().setColorFilter(getResources().getColor(R.color.colorGray),
                             PorterDuff.Mode.SRC_ATOP);
                     five = true;
+                    secondArray.remove(tvFive.getText().toString());
 
                 }
 
@@ -147,11 +170,13 @@ public class SecondCatagoryItemsActivity2 extends AppCompatActivity {
                     tvSix.getBackground().setColorFilter(getResources().getColor(R.color.colorPrimary),
                             PorterDuff.Mode.SRC_ATOP);
                     six = false;
+                    secondArray.add(tvSix.getText().toString());
                 } else {
 
                     tvSix.getBackground().setColorFilter(getResources().getColor(R.color.colorGray),
                             PorterDuff.Mode.SRC_ATOP);
                     six = true;
+                    secondArray.remove(tvSix.getText().toString());
 
                 }
 
@@ -163,11 +188,13 @@ public class SecondCatagoryItemsActivity2 extends AppCompatActivity {
                     tvSeven.getBackground().setColorFilter(getResources().getColor(R.color.colorPrimary),
                             PorterDuff.Mode.SRC_ATOP);
                     seavon = false;
+                    secondArray.add(tvSeven.getText().toString());
                 } else {
 
                     tvSeven.getBackground().setColorFilter(getResources().getColor(R.color.colorGray),
                             PorterDuff.Mode.SRC_ATOP);
                     seavon = true;
+                    secondArray.remove(tvSeven.getText().toString());
 
                 }
 
@@ -180,11 +207,13 @@ public class SecondCatagoryItemsActivity2 extends AppCompatActivity {
                     tvEight.getBackground().setColorFilter(getResources().getColor(R.color.colorPrimary),
                             PorterDuff.Mode.SRC_ATOP);
                     eight = false;
+                    secondArray.add(tvEight.getText().toString());
                 } else {
 
                     tvEight.getBackground().setColorFilter(getResources().getColor(R.color.colorGray),
                             PorterDuff.Mode.SRC_ATOP);
                     eight = true;
+                    secondArray.remove(tvEight.getText().toString());
 
                 }
 
@@ -195,11 +224,13 @@ public class SecondCatagoryItemsActivity2 extends AppCompatActivity {
                     tvNine.getBackground().setColorFilter(getResources().getColor(R.color.colorPrimary),
                             PorterDuff.Mode.SRC_ATOP);
                     nine = false;
+                    thirdArray.add(tvNine.getText().toString());
                 } else {
 
                     tvNine.getBackground().setColorFilter(getResources().getColor(R.color.colorGray),
                             PorterDuff.Mode.SRC_ATOP);
                     nine = true;
+                    thirdArray.remove(tvNine.getText().toString());
 
                 }
 
@@ -213,11 +244,13 @@ public class SecondCatagoryItemsActivity2 extends AppCompatActivity {
                     tvTen.getBackground().setColorFilter(getResources().getColor(R.color.colorPrimary),
                             PorterDuff.Mode.SRC_ATOP);
                     ten = false;
+                    thirdArray.add(tvTen.getText().toString());
                 } else {
 
                     tvTen.getBackground().setColorFilter(getResources().getColor(R.color.colorGray),
                             PorterDuff.Mode.SRC_ATOP);
                     ten = true;
+                    thirdArray.remove(tvTen.getText().toString());
 
                 }
 
@@ -228,11 +261,13 @@ public class SecondCatagoryItemsActivity2 extends AppCompatActivity {
                     tvEleven.getBackground().setColorFilter(getResources().getColor(R.color.colorPrimary),
                             PorterDuff.Mode.SRC_ATOP);
                     eleven = false;
+                    thirdArray.add(tvEleven.getText().toString());
                 } else {
 
                     tvEleven.getBackground().setColorFilter(getResources().getColor(R.color.colorGray),
                             PorterDuff.Mode.SRC_ATOP);
                     eleven = true;
+                    thirdArray.remove(tvEleven.getText().toString());
 
                 }
 
@@ -244,11 +279,13 @@ public class SecondCatagoryItemsActivity2 extends AppCompatActivity {
                     tvTewelve.getBackground().setColorFilter(getResources().getColor(R.color.colorPrimary),
                             PorterDuff.Mode.SRC_ATOP);
                     tewelve = false;
+                    thirdArray.add(tvTewelve.getText().toString());
                 } else {
 
                     tvTewelve.getBackground().setColorFilter(getResources().getColor(R.color.colorGray),
                             PorterDuff.Mode.SRC_ATOP);
                     tewelve = true;
+                    thirdArray.remove(tvTewelve.getText().toString());
 
                 }
 
@@ -260,11 +297,13 @@ public class SecondCatagoryItemsActivity2 extends AppCompatActivity {
                     tvTera.getBackground().setColorFilter(getResources().getColor(R.color.colorPrimary),
                             PorterDuff.Mode.SRC_ATOP);
                     tera = false;
+                    forthArray.add(tvTera.getText().toString());
                 } else {
 
                     tvTera.getBackground().setColorFilter(getResources().getColor(R.color.colorGray),
                             PorterDuff.Mode.SRC_ATOP);
                     tera = true;
+                    forthArray.remove(tvTera.getText().toString());
 
                 }
 
@@ -276,11 +315,13 @@ public class SecondCatagoryItemsActivity2 extends AppCompatActivity {
                     tvChoda.getBackground().setColorFilter(getResources().getColor(R.color.colorPrimary),
                             PorterDuff.Mode.SRC_ATOP);
                     choda = false;
+                    forthArray.add(tvChoda.getText().toString());
                 } else {
 
                     tvChoda.getBackground().setColorFilter(getResources().getColor(R.color.colorGray),
                             PorterDuff.Mode.SRC_ATOP);
                     choda = true;
+                    forthArray.remove(tvChoda.getText().toString());
 
                 }
 
@@ -291,11 +332,13 @@ public class SecondCatagoryItemsActivity2 extends AppCompatActivity {
                     tvPandra.getBackground().setColorFilter(getResources().getColor(R.color.colorPrimary),
                             PorterDuff.Mode.SRC_ATOP);
                     panda = false;
+                    forthArray.add(tvPandra.getText().toString());
                 } else {
 
                     tvPandra.getBackground().setColorFilter(getResources().getColor(R.color.colorGray),
                             PorterDuff.Mode.SRC_ATOP);
                     panda = true;
+                    forthArray.remove(tvPandra.getText().toString());
 
                 }
 
@@ -307,11 +350,13 @@ public class SecondCatagoryItemsActivity2 extends AppCompatActivity {
                     tvSolla.getBackground().setColorFilter(getResources().getColor(R.color.colorPrimary),
                             PorterDuff.Mode.SRC_ATOP);
                     solla = false;
+                    forthArray.add(tvSolla.getText().toString());
                 } else {
 
                     tvSolla.getBackground().setColorFilter(getResources().getColor(R.color.colorGray),
                             PorterDuff.Mode.SRC_ATOP);
                     solla = true;
+                    forthArray.remove(tvSolla.getText().toString());
 
                 }
 
