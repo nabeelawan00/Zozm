@@ -1,5 +1,6 @@
 package com.app.zozm.activities;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
@@ -27,11 +28,13 @@ public class OrderActivity extends AppCompatActivity implements View.OnClickList
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         TextView mTitle = (TextView) findViewById(R.id.textView11);
-//        getSupportActionBar().setDisplayShowTitleEnabled(false);
 
         backArrow = findViewById(R.id.imageView15);
         setSupportActionBar(toolbar);
         mTitle.setText("أكمل الطلب");
+
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+
         backArrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -366,7 +366,13 @@ public class FirstCatagoryItemsActivity extends AppCompatActivity {
                 break;
             case R.id.button2:
 
-                Intent intent = new Intent(this, OrderActivity.class);
+                Intent intent = new Intent(this, CartActivity.class);
+
+                intent.putExtra("firstArray", firstArray);
+                intent.putExtra("secondArray", secondArray);
+                intent.putExtra("thirdArray", thirdArray);
+                intent.putExtra("forthArray", forthArray);
+
                 startActivity(intent);
 
                 break;

@@ -1,5 +1,6 @@
 package com.app.zozm.activities;
 
+import android.content.Intent;
 import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.view.View;
@@ -12,11 +13,18 @@ import androidx.appcompat.widget.Toolbar;
 
 import com.app.zozm.R;
 
+import java.util.ArrayList;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class EightCatagoryItemsActivity extends AppCompatActivity {
+
+    ArrayList<String> firstArray;
+    ArrayList<String> secondArray;
+    ArrayList<String> thirdArray;
+    ArrayList<String> forthArray;
 
     boolean one = true, two = true, three = true, four = true, five = true, six = true, seavon = true, eight = true, nine = true, ten = true, eleven = true, tewelve = true, tera = true, choda = true, panda = true, solla = true, satara = true, athara = true, unni = true, twanty = true;
 
@@ -73,6 +81,12 @@ public class EightCatagoryItemsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_eight_catagory_items);
+
+        firstArray = new ArrayList<>();
+        secondArray = new ArrayList<>();
+        thirdArray = new ArrayList<>();
+        forthArray = new ArrayList<>();
+
         ButterKnife.bind(this);
     }
 
@@ -84,10 +98,12 @@ public class EightCatagoryItemsActivity extends AppCompatActivity {
                     tvOne.getBackground().setColorFilter(getResources().getColor(R.color.colorPrimary),
                             PorterDuff.Mode.SRC_ATOP);
                     one = false;
+                    firstArray.add(tvOne.getText().toString());
                 } else {
 
                     tvOne.getBackground().setColorFilter(getResources().getColor(R.color.colorGray),
                             PorterDuff.Mode.SRC_ATOP);
+                    firstArray.remove(tvOne.getText().toString());
                     one = true;
 
                 }
@@ -97,11 +113,13 @@ public class EightCatagoryItemsActivity extends AppCompatActivity {
                     tvTwo.getBackground().setColorFilter(getResources().getColor(R.color.colorPrimary),
                             PorterDuff.Mode.SRC_ATOP);
                     two = false;
+                    firstArray.add(tvTwo.getText().toString());
                 } else {
 
                     tvTwo.getBackground().setColorFilter(getResources().getColor(R.color.colorGray),
                             PorterDuff.Mode.SRC_ATOP);
                     two = true;
+                    firstArray.remove(tvTwo.getText().toString());
 
                 }
                 break;
@@ -110,11 +128,13 @@ public class EightCatagoryItemsActivity extends AppCompatActivity {
                     tvThree.getBackground().setColorFilter(getResources().getColor(R.color.colorPrimary),
                             PorterDuff.Mode.SRC_ATOP);
                     three = false;
+                    firstArray.add(tvThree.getText().toString());
                 } else {
 
                     tvThree.getBackground().setColorFilter(getResources().getColor(R.color.colorGray),
                             PorterDuff.Mode.SRC_ATOP);
                     three = true;
+                    firstArray.remove(tvThree.getText().toString());
 
                 }
                 break;
@@ -124,11 +144,13 @@ public class EightCatagoryItemsActivity extends AppCompatActivity {
                     tvFour.getBackground().setColorFilter(getResources().getColor(R.color.colorPrimary),
                             PorterDuff.Mode.SRC_ATOP);
                     four = false;
+                    firstArray.add(tvFour.getText().toString());
                 } else {
 
                     tvFour.getBackground().setColorFilter(getResources().getColor(R.color.colorGray),
                             PorterDuff.Mode.SRC_ATOP);
                     four = true;
+                    firstArray.remove(tvFour.getText().toString());
 
                 }
 
@@ -139,13 +161,16 @@ public class EightCatagoryItemsActivity extends AppCompatActivity {
                     tvFive.getBackground().setColorFilter(getResources().getColor(R.color.colorPrimary),
                             PorterDuff.Mode.SRC_ATOP);
                     five = false;
+                    secondArray.add(tvFive.getText().toString());
                 } else {
 
                     tvFive.getBackground().setColorFilter(getResources().getColor(R.color.colorGray),
                             PorterDuff.Mode.SRC_ATOP);
                     five = true;
+                    secondArray.remove(tvFive.getText().toString());
 
                 }
+
 
                 break;
             case R.id.tv_six:
@@ -154,11 +179,13 @@ public class EightCatagoryItemsActivity extends AppCompatActivity {
                     tvSix.getBackground().setColorFilter(getResources().getColor(R.color.colorPrimary),
                             PorterDuff.Mode.SRC_ATOP);
                     six = false;
+                    secondArray.add(tvSix.getText().toString());
                 } else {
 
                     tvSix.getBackground().setColorFilter(getResources().getColor(R.color.colorGray),
                             PorterDuff.Mode.SRC_ATOP);
                     six = true;
+                    secondArray.remove(tvSix.getText().toString());
 
                 }
 
@@ -169,11 +196,13 @@ public class EightCatagoryItemsActivity extends AppCompatActivity {
                     tvSeven.getBackground().setColorFilter(getResources().getColor(R.color.colorPrimary),
                             PorterDuff.Mode.SRC_ATOP);
                     seavon = false;
+                    secondArray.add(tvSeven.getText().toString());
                 } else {
 
                     tvSeven.getBackground().setColorFilter(getResources().getColor(R.color.colorGray),
                             PorterDuff.Mode.SRC_ATOP);
                     seavon = true;
+                    secondArray.remove(tvSeven.getText().toString());
 
                 }
 
@@ -184,11 +213,13 @@ public class EightCatagoryItemsActivity extends AppCompatActivity {
                     tvEight.getBackground().setColorFilter(getResources().getColor(R.color.colorPrimary),
                             PorterDuff.Mode.SRC_ATOP);
                     eight = false;
+                    secondArray.add(tvEight.getText().toString());
                 } else {
 
                     tvEight.getBackground().setColorFilter(getResources().getColor(R.color.colorGray),
                             PorterDuff.Mode.SRC_ATOP);
                     eight = true;
+                    secondArray.remove(tvEight.getText().toString());
 
                 }
 
@@ -200,11 +231,13 @@ public class EightCatagoryItemsActivity extends AppCompatActivity {
                     tvNine.getBackground().setColorFilter(getResources().getColor(R.color.colorPrimary),
                             PorterDuff.Mode.SRC_ATOP);
                     nine = false;
+                    secondArray.add(tvNine.getText().toString());
                 } else {
 
                     tvNine.getBackground().setColorFilter(getResources().getColor(R.color.colorGray),
                             PorterDuff.Mode.SRC_ATOP);
                     nine = true;
+                    secondArray.remove(tvNine.getText().toString());
 
                 }
 
@@ -215,11 +248,13 @@ public class EightCatagoryItemsActivity extends AppCompatActivity {
                     tvTen.getBackground().setColorFilter(getResources().getColor(R.color.colorPrimary),
                             PorterDuff.Mode.SRC_ATOP);
                     ten = false;
+                    secondArray.add(tvTen.getText().toString());
                 } else {
 
                     tvTen.getBackground().setColorFilter(getResources().getColor(R.color.colorGray),
                             PorterDuff.Mode.SRC_ATOP);
                     ten = true;
+                    secondArray.remove(tvTen.getText().toString());
 
                 }
 
@@ -230,11 +265,13 @@ public class EightCatagoryItemsActivity extends AppCompatActivity {
                     tvEleven.getBackground().setColorFilter(getResources().getColor(R.color.colorPrimary),
                             PorterDuff.Mode.SRC_ATOP);
                     eleven = false;
+                    secondArray.add(tvEleven.getText().toString());
                 } else {
 
                     tvEleven.getBackground().setColorFilter(getResources().getColor(R.color.colorGray),
                             PorterDuff.Mode.SRC_ATOP);
                     eleven = true;
+                    secondArray.remove(tvEleven.getText().toString());
 
                 }
                 break;
@@ -244,15 +281,15 @@ public class EightCatagoryItemsActivity extends AppCompatActivity {
                     tvTewelve.getBackground().setColorFilter(getResources().getColor(R.color.colorPrimary),
                             PorterDuff.Mode.SRC_ATOP);
                     tewelve = false;
+                    secondArray.add(tvTewelve.getText().toString());
                 } else {
 
                     tvTewelve.getBackground().setColorFilter(getResources().getColor(R.color.colorGray),
                             PorterDuff.Mode.SRC_ATOP);
                     tewelve = true;
+                    secondArray.remove(tvTewelve.getText().toString());
 
                 }
-                break;
-            case R.id.button2:
                 break;
             case R.id.tv_solla:
 
@@ -260,11 +297,13 @@ public class EightCatagoryItemsActivity extends AppCompatActivity {
                     tvSolla.getBackground().setColorFilter(getResources().getColor(R.color.colorPrimary),
                             PorterDuff.Mode.SRC_ATOP);
                     solla = false;
+                    thirdArray.add(tvSolla.getText().toString());
                 } else {
 
                     tvSolla.getBackground().setColorFilter(getResources().getColor(R.color.colorGray),
                             PorterDuff.Mode.SRC_ATOP);
                     solla = true;
+                    thirdArray.remove(tvSolla.getText().toString());
 
                 }
                 break;
@@ -274,6 +313,7 @@ public class EightCatagoryItemsActivity extends AppCompatActivity {
                     tvPandra.getBackground().setColorFilter(getResources().getColor(R.color.colorPrimary),
                             PorterDuff.Mode.SRC_ATOP);
                     panda = false;
+
                 } else {
 
                     tvPandra.getBackground().setColorFilter(getResources().getColor(R.color.colorGray),
@@ -288,12 +328,13 @@ public class EightCatagoryItemsActivity extends AppCompatActivity {
                     tvChoda.getBackground().setColorFilter(getResources().getColor(R.color.colorPrimary),
                             PorterDuff.Mode.SRC_ATOP);
                     choda = false;
+                    thirdArray.add(tvChoda.getText().toString());
                 } else {
 
                     tvChoda.getBackground().setColorFilter(getResources().getColor(R.color.colorGray),
                             PorterDuff.Mode.SRC_ATOP);
                     choda = true;
-
+                    thirdArray.remove(tvChoda.getText().toString());
                 }
 
                 break;
@@ -303,11 +344,13 @@ public class EightCatagoryItemsActivity extends AppCompatActivity {
                     tvTera.getBackground().setColorFilter(getResources().getColor(R.color.colorPrimary),
                             PorterDuff.Mode.SRC_ATOP);
                     tera = false;
+                    thirdArray.add(tvTera.getText().toString());
                 } else {
 
                     tvTera.getBackground().setColorFilter(getResources().getColor(R.color.colorGray),
                             PorterDuff.Mode.SRC_ATOP);
                     tera = true;
+                    thirdArray.remove(tvTera.getText().toString());
 
                 }
                 break;
@@ -316,11 +359,13 @@ public class EightCatagoryItemsActivity extends AppCompatActivity {
                     tvSatara.getBackground().setColorFilter(getResources().getColor(R.color.colorPrimary),
                             PorterDuff.Mode.SRC_ATOP);
                     satara = false;
+                    forthArray.add(tvSatara.getText().toString());
                 } else {
 
                     tvSatara.getBackground().setColorFilter(getResources().getColor(R.color.colorGray),
                             PorterDuff.Mode.SRC_ATOP);
                     satara = true;
+                    forthArray.remove(tvSatara.getText().toString());
 
                 }
                 break;
@@ -329,11 +374,13 @@ public class EightCatagoryItemsActivity extends AppCompatActivity {
                     tvAthara.getBackground().setColorFilter(getResources().getColor(R.color.colorPrimary),
                             PorterDuff.Mode.SRC_ATOP);
                     athara = false;
+                    forthArray.add(tvAthara.getText().toString());
                 } else {
 
                     tvAthara.getBackground().setColorFilter(getResources().getColor(R.color.colorGray),
                             PorterDuff.Mode.SRC_ATOP);
                     athara = true;
+                    forthArray.remove(tvAthara.getText().toString());
 
                 }
                 break;
@@ -342,11 +389,13 @@ public class EightCatagoryItemsActivity extends AppCompatActivity {
                     tvUnni.getBackground().setColorFilter(getResources().getColor(R.color.colorPrimary),
                             PorterDuff.Mode.SRC_ATOP);
                     unni = false;
+                    forthArray.add(tvUnni.getText().toString());
                 } else {
 
                     tvUnni.getBackground().setColorFilter(getResources().getColor(R.color.colorGray),
                             PorterDuff.Mode.SRC_ATOP);
                     unni = true;
+                    forthArray.remove(tvUnni.getText().toString());
 
                 }
                 break;
@@ -363,6 +412,18 @@ public class EightCatagoryItemsActivity extends AppCompatActivity {
 
                 }
                 break;
+            case R.id.button2:
+
+                Intent intent = new Intent(this, CartActivity.class);
+
+                intent.putExtra("firstArray", firstArray);
+                intent.putExtra("secondArray", secondArray);
+                intent.putExtra("thirdArray", thirdArray);
+                intent.putExtra("forthArray", forthArray);
+
+                startActivity(intent);
+
+                break;
         }
     }
 
@@ -370,4 +431,5 @@ public class EightCatagoryItemsActivity extends AppCompatActivity {
     public void onClick() {
         onBackPressed();
     }
+
 }
