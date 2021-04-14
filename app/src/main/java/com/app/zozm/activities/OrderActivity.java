@@ -27,7 +27,7 @@ public class OrderActivity extends AppCompatActivity implements View.OnClickList
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         TextView mTitle = (TextView) findViewById(R.id.textView11);
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
+//        getSupportActionBar().setDisplayShowTitleEnabled(false);
 
         backArrow = findViewById(R.id.imageView15);
         setSupportActionBar(toolbar);
