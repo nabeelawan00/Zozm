@@ -14,6 +14,7 @@ import android.util.DisplayMetrics;
 import android.util.TypedValue;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.app.zozm.Adapters.ItemCatagoryAdapter;
@@ -24,6 +25,7 @@ public class ItemCatagoryActivity extends AppCompatActivity {
     RecyclerView.LayoutManager mLayoutManager;
     RecyclerView recyclerView;
     ItemCatagoryAdapter itemCatagoryAdapter;
+    ImageView backArrow;
     private final String itemnames[] = {
             "سندات وعقود",
             "فواتير",
@@ -51,13 +53,14 @@ public class ItemCatagoryActivity extends AppCompatActivity {
 
         getSupportActionBar().setDisplayShowTitleEnabled(false);
 
-        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
-        getSupportActionBar().setElevation(0);
-        final Drawable upArrow = getResources().getDrawable(R.drawable.abc_ic_ab_back_material);
-        upArrow.setColorFilter(getResources().getColor(R.color.colorDarkGray), PorterDuff.Mode.SRC_ATOP);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setHomeButtonEnabled(true);
-        getSupportActionBar().setHomeAsUpIndicator(upArrow);
+
+        backArrow = findViewById(R.id.imageView15);
+        backArrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
 
         initilisationView();
 

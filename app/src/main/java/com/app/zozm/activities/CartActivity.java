@@ -1,6 +1,8 @@
 package com.app.zozm.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -9,6 +11,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.app.zozm.Adapters.FirstAdapter;
 import com.app.zozm.Adapters.ForthAdapter;
@@ -35,6 +38,13 @@ public class CartActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cart);
 
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        TextView mTitle = (TextView) findViewById(R.id.textView11);
+
+        setSupportActionBar(toolbar);
+        mTitle.setText("أكمل الطلب");
+
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
 
         imageView15 = findViewById(R.id.imageView15);
         buttonNext = findViewById(R.id.button2);
@@ -45,7 +55,7 @@ public class CartActivity extends AppCompatActivity {
         forth_recycler = findViewById(R.id.forth_recycler);
 
         firstLinearLayoutManager = new LinearLayoutManager(this, RecyclerView.HORIZONTAL, false);
-        secondLinearLayoutManager = new LinearLayoutManager(this, RecyclerView.HORIZONTAL, false);
+        secondLinearLayoutManager = new GridLayoutManager(this, 4);
         thirdLinearLayoutManager = new LinearLayoutManager(this, RecyclerView.HORIZONTAL, false);
         forthLinearLayoutManager = new LinearLayoutManager(this, RecyclerView.HORIZONTAL, false);
 
@@ -70,6 +80,14 @@ public class CartActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(CartActivity.this, OrderActivity.class);
+
+
+                intent.putExtra("firstArray", firstArray);
+                intent.putExtra("secondArray", secondArray);
+                intent.putExtra("thirdArray", thirdArray);
+                intent.putExtra("forthArray", forthArray);
+
+
                 startActivity(intent);
             }
         });
