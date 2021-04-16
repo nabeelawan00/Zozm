@@ -32,7 +32,7 @@
         android:paddingEnd="20dp"
         android:text="طلب طباعة جديد"
         android:textColor="@color/colorWhite"
-        android:textSize="20sp"
+        android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="@+id/layerone"
         app:layout_constraintEnd_toStartOf="@+id/imageView"
         app:layout_constraintStart_toStartOf="@+id/layerone"
@@ -70,9 +70,9 @@
         android:layout_marginEnd="24dp"
         android:fontFamily="@font/cairo_regular"
         android:paddingEnd="20dp"
-        android:text="كيف يتم الطلب؟"
+        android:text="كيف يتم الطلب"
         android:textColor="@color/colorWhite"
-        android:textSize="20sp"
+        android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="@+id/layertwo"
         app:layout_constraintEnd_toStartOf="@+id/imageView1"
         app:layout_constraintStart_toStartOf="@+id/layertwo"
@@ -86,8 +86,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/layertwo"
         app:layout_constraintEnd_toEndOf="@+id/layertwo"
         app:layout_constraintTop_toTopOf="@+id/layertwo"
-        app:srcCompat="@drawable/layers_1" />
-
+        app:srcCompat="@drawable/question" />
 
     <View
         android:id="@+id/layerthree"
@@ -111,7 +110,7 @@
         android:paddingEnd="20dp"
         android:text="هل لديك أي إستفسار"
         android:textColor="@color/colorWhite"
-        android:textSize="20sp"
+        android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="@+id/layerthree"
         app:layout_constraintEnd_toStartOf="@+id/imageView2"
         app:layout_constraintStart_toStartOf="@+id/layerthree"

@@ -25,6 +25,8 @@ public class SeventhCatagoryItemsActivity extends AppCompatActivity {
     ArrayList<String> thirdArray;
     ArrayList<String> forthArray;
 
+    TextView textView11;
+
     boolean one = true, two = true, three = true, four = true, five = true, six = true, seavon = true, eight = true, nine = true, ten = true, eleven = true, tewelve = true, tera = true, choda = true, panda = true, solla = true;
 
     @BindView(R.id.tv_one)
@@ -73,6 +75,9 @@ public class SeventhCatagoryItemsActivity extends AppCompatActivity {
         secondArray = new ArrayList<>();
         thirdArray = new ArrayList<>();
         forthArray = new ArrayList<>();
+
+        textView11 = findViewById(R.id.textView11);
+        textView11.setText("اختر الخدمة التي تريد");
 
         ButterKnife.bind(this);
 

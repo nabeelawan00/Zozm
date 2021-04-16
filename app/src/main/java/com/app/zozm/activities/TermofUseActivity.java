@@ -23,7 +23,6 @@ public class TermofUseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_termof_use);
 
-
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         TextView mTitle = (TextView) findViewById(R.id.textView11);
 
@@ -41,7 +40,6 @@ public class TermofUseActivity extends AppCompatActivity {
         });
 
     }
-
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {

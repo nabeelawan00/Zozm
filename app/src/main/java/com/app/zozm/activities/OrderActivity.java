@@ -4,6 +4,9 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -121,25 +124,70 @@ public class OrderActivity extends AppCompatActivity implements View.OnClickList
                         String bar = foo.toString();
                         desiredString = bar.substring(0, 3);
 
-                        if (phone.getText().toString().length() == 10 && desiredString.equals("051")) {
+                        if (phone.getText().toString().length() == 10) {
+                            if (desiredString.equals("051")){
 
-//                          send order mail
+//                                send order mail
 
-                            Map<String, String> params = new HashMap<>();
-                            params.put("name", name.getText().toString());
-                            params.put("phone", phone.getText().toString());
-                            params.put("subject", "Print Order");
-                            params.put("message", orderDetail);
+                                ConnectivityManager cm =
+                                        (ConnectivityManager)this.getSystemService(Context.CONNECTIVITY_SERVICE);
 
-                            ParameterService parameterService = new ParameterService(this, this, this);
-                            parameterService.getData(params, AppURL.url);
+                                NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
+                                boolean isConnected = activeNetwork != null &&
+                                        activeNetwork.isConnectedOrConnecting();
 
+                                if (isConnected){
+
+                                    Map<String, String> params = new HashMap<>();
+                                    params.put("name", name.getText().toString());
+                                    params.put("phone", phone.getText().toString());
+                                    params.put("subject", "Print Order");
+                                    params.put("message", orderDetail);
+
+                                    ParameterService parameterService = new ParameterService(this, this, this);
+                                    parameterService.getData(params, AppURL.url);
+
+                                }else {
+
+                                    new iOSDialogBuilder(this)
+                                            .setTitle(this.getString(R.string.title))
+                                            .setSubtitle("Please connect your internet!")
+                                            .setBoldPositiveLabel(true)
+                                            .setCancelable(false)
+                                            .setPositiveListener(this.getString(R.string.ok1), new iOSDialogClickListener() {
+                                                @Override
+                                                public void onClick(iOSDialog dialog) {
+                                                    dialog.dismiss();
+
+                                                }
+                                            })
+                                            .build().show();
+
+                                }
+
+                            }else {
+
+                                new iOSDialogBuilder(this)
+                                        .setTitle(this.getString(R.string.title))
+                                        .setSubtitle("من فضلك ادخل الرقم باللغة الانجليزية")
+                                        .setBoldPositiveLabel(true)
+                                        .setCancelable(false)
+                                        .setPositiveListener(this.getString(R.string.ok1), new iOSDialogClickListener() {
+                                            @Override
+                                            public void onClick(iOSDialog dialog) {
+                                                dialog.dismiss();
+
+                                            }
+                                        })
+                                        .build().show();
+
+                            }
 
                         } else {
 
                             new iOSDialogBuilder(this)
                                     .setTitle(this.getString(R.string.title))
-                                    .setSubtitle("Enter correct Phone number")
+                                    .setSubtitle("فضلاً ادخال رقم الجوال (١٠) خانات")
                                     .setBoldPositiveLabel(true)
                                     .setCancelable(false)
                                     .setPositiveListener(this.getString(R.string.ok1), new iOSDialogClickListener() {
@@ -156,7 +204,7 @@ public class OrderActivity extends AppCompatActivity implements View.OnClickList
                     } else {
                         new iOSDialogBuilder(this)
                                 .setTitle(this.getString(R.string.title))
-                                .setSubtitle("Enter Phone number")
+                                .setSubtitle("فضلاً ادخل رقم الجوال بالانجليزي")
                                 .setBoldPositiveLabel(true)
                                 .setCancelable(false)
                                 .setPositiveListener(this.getString(R.string.ok1), new iOSDialogClickListener() {
@@ -173,7 +221,7 @@ public class OrderActivity extends AppCompatActivity implements View.OnClickList
 
                     new iOSDialogBuilder(this)
                             .setTitle(this.getString(R.string.title))
-                            .setSubtitle("Enter Name")
+                            .setSubtitle("فضلاً ادخل رقم الجوال بالانجليزي")
                             .setBoldPositiveLabel(true)
                             .setCancelable(false)
                             .setPositiveListener(this.getString(R.string.ok1), new iOSDialogClickListener() {
@@ -208,7 +256,7 @@ public class OrderActivity extends AppCompatActivity implements View.OnClickList
                 String message = object.getString("Message");
                 new iOSDialogBuilder(this)
                         .setTitle(this.getString(R.string.title))
-                        .setSubtitle(message)
+                        .setSubtitle("تم ارسال طلبك بنجاح")
                         .setBoldPositiveLabel(true)
                         .setCancelable(false)
                         .setPositiveListener(this.getString(R.string.ok1), new iOSDialogClickListener() {
@@ -224,7 +272,7 @@ public class OrderActivity extends AppCompatActivity implements View.OnClickList
 
                 new iOSDialogBuilder(this)
                         .setTitle(this.getString(R.string.title))
-                        .setSubtitle(this.getString(R.string.subtitlenet))
+                        .setSubtitle("هناك خطأ ما")
                         .setBoldPositiveLabel(true)
                         .setCancelable(false)
                         .setPositiveListener(this.getString(R.string.ok1), new iOSDialogClickListener() {

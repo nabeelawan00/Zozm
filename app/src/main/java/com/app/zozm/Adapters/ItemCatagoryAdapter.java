@@ -78,12 +78,12 @@ public class ItemCatagoryAdapter extends RecyclerView.Adapter<ItemCatagoryAdapte
                 switch (position) {
                     case 0:
 
-                        Intent intent1 = new Intent(mContext, FirstCatagoryItemsActivity.class);
+                        Intent intent1 = new Intent(mContext, SecondCatagoryItemsActivity2.class);
                         mContext.startActivity(intent1);
 
                         break;
                     case 1:
-                        Intent intent2 = new Intent(mContext, SecondCatagoryItemsActivity2.class);
+                        Intent intent2 = new Intent(mContext, FirstCatagoryItemsActivity .class);
                         mContext.startActivity(intent2);
                         break;
                     case 2:
