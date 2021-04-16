@@ -45,22 +45,21 @@ public class ParameterService {
 
     public void getData(Map<String, String> params, final String url) {
 
-//        kProgressHUD.show();
+        kProgressHUD.show();
 
         final CustomRequest jsonObjectRequest = new CustomRequest(Request.Method.POST, url, params, new Response.Listener<JSONObject>() {
 
             @Override
             public void onResponse(JSONObject response) {
 
-//                kProgressHUD.dismiss();
+                kProgressHUD.dismiss();
                 responceInterface.getResponse(response);
 
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-//                kProgressHUD.dismiss();
-                Log.d("dfads", "onErrorResponse: " + error.getMessage());
+                kProgressHUD.dismiss();
                 new iOSDialogBuilder(mContext)
                         .setTitle(mContext.getString(R.string.title))
                         .setSubtitle(mContext.getString(R.string.subtitlenet))

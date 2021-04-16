@@ -12,19 +12,12 @@ import com.kaopiz.kprogresshud.KProgressHUD;
 public class UtilsProgressbar {
 
     public static KProgressHUD showProgressDialog(Context context) {
-//        ProgressDialog progressDialog = new ProgressDialog(context);
-////        progressDialog.setMessage(message);
-//        progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
-//        progressDialog.setCancelable(false);
-//        progressDialog.show();
-//        return progressDialog;
 
         KProgressHUD progressHUD = KProgressHUD.create(context)
                 .setStyle(KProgressHUD.Style.SPIN_INDETERMINATE)
                 .setCancellable(true)
                 .setAnimationSpeed(2)
-                .setBackgroundColor(Color.TRANSPARENT)
-                .setDetailsLabel("Loading", Color.DKGRAY)
+                .setBackgroundColor(Color.BLACK)
                 .setDimAmount(0.5f);
         return progressHUD;
     }

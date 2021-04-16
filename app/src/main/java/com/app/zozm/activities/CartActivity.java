@@ -54,8 +54,10 @@ public class CartActivity extends AppCompatActivity {
         third_recycler = findViewById(R.id.third_recycler);
         forth_recycler = findViewById(R.id.forth_recycler);
 
+        second_recyclerview.setHasFixedSize(true);
+
         firstLinearLayoutManager = new LinearLayoutManager(this, RecyclerView.HORIZONTAL, false);
-        secondLinearLayoutManager = new GridLayoutManager(this, 4);
+        secondLinearLayoutManager = new LinearLayoutManager(this,RecyclerView.HORIZONTAL,false);
         thirdLinearLayoutManager = new LinearLayoutManager(this, RecyclerView.HORIZONTAL, false);
         forthLinearLayoutManager = new LinearLayoutManager(this, RecyclerView.HORIZONTAL, false);
 
