@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_image"
+    android:background="@mipmap/background_image"
     tools:context=".activities.OrderActivity">
 
     <androidx.appcompat.widget.Toolbar
@@ -34,8 +34,10 @@
 
     <ImageView
         android:id="@+id/imageView15"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
         android:layout_marginStart="8dp"
         app:layout_constraintBottom_toBottomOf="@+id/toolbar"
         app:layout_constraintStart_toStartOf="@+id/toolbar"
@@ -94,7 +96,7 @@
         android:background="@drawable/shedow_round"
         android:backgroundTint="#A7A5A5"
         android:ems="10"
-        android:inputType="number"
+        android:inputType="textPersonName"
         android:padding="10dp"
         android:textColor="@color/colorBlack"
         app:layout_constraintEnd_toStartOf="@+id/textView24"
@@ -108,10 +110,10 @@
         android:layout_marginTop="50dp"
         android:background="@drawable/shedow_round"
         android:backgroundTint="@color/colorPrimary"
-        android:fontFamily="@font/cairo_regular"
-        android:paddingStart="20dp"
+        android:fontFamily="@font/cairo_bold"
+        android:paddingStart="40dp"
         android:paddingTop="5dp"
-        android:paddingEnd="20dp"
+        android:paddingEnd="40dp"
         android:paddingBottom="5dp"
         android:text="أرسل الطلب"
         android:textColor="@color/colorWhite"

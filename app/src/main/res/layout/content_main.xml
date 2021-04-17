@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_image"
+    android:background="@mipmap/background_image"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:showIn="@layout/app_bar_main">
 
@@ -12,10 +12,10 @@
     <View
         android:id="@+id/layerone"
         android:layout_width="0dp"
-        android:layout_height="100dp"
+        android:layout_height="110dp"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
-        android:layout_marginBottom="60dp"
+        android:layout_marginBottom="40dp"
         android:background="@drawable/shedow_round"
         android:backgroundTint="@color/colorRed"
         app:layout_constraintBottom_toTopOf="@+id/layertwo"
@@ -52,10 +52,10 @@
     <View
         android:id="@+id/layertwo"
         android:layout_width="0dp"
-        android:layout_height="100dp"
+        android:layout_height="110dp"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginBottom="40dp"
         android:background="@drawable/shedow_round"
         android:backgroundTint="@color/colorSkyBlue"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -91,9 +91,9 @@
     <View
         android:id="@+id/layerthree"
         android:layout_width="0dp"
-        android:layout_height="100dp"
+        android:layout_height="110dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="32dp"
         android:background="@drawable/shedow_round"
         android:backgroundTint="@color/colorBlackishBlue"

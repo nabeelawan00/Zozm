@@ -3,8 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@drawable/background_image"
     android:layout_height="match_parent"
+    android:background="@mipmap/background_image"
     tools:context=".activities.CartActivity">
 
 
@@ -34,9 +34,11 @@
 
     <ImageView
         android:id="@+id/imageView15"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:layout_marginStart="8dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
         app:layout_constraintBottom_toBottomOf="@+id/toolbar"
         app:layout_constraintStart_toStartOf="@+id/toolbar"
         app:layout_constraintTop_toTopOf="parent"
@@ -46,7 +48,7 @@
         android:id="@+id/first_recyclerview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
@@ -57,7 +59,6 @@
         android:id="@+id/second_recyclerview"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/first_recyclerview" />
@@ -66,7 +67,6 @@
         android:id="@+id/third_recycler"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/second_recyclerview" />
@@ -75,7 +75,6 @@
         android:id="@+id/forth_recycler"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/third_recycler" />
@@ -87,12 +86,12 @@
         android:layout_marginBottom="16dp"
         android:background="@drawable/shedow_round"
         android:backgroundTint="@color/colorPrimary"
-        android:fontFamily="@font/cairo_regular"
-        android:paddingStart="20dp"
+        android:fontFamily="@font/cairo_bold"
+        android:paddingStart="50dp"
         android:paddingTop="5dp"
-        android:paddingEnd="20dp"
+        android:paddingEnd="50dp"
         android:paddingBottom="5dp"
-        android:text="أرسل الطلب"
+        android:text="التالي"
         android:textColor="@color/colorWhite"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -104,8 +103,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="ملخص طلبك:"
         android:fontFamily="@font/cairo_bold"
+        android:text="ملخص طلبك:"
         android:textColor="@color/colorBlack"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"

@@ -6,8 +6,7 @@
     android:layout_height="match_parent"
     android:layout_marginBottom="5dp"
     android:alpha="9"
-    android:background="@drawable/background_image">
-
+    android:background="@mipmap/background_image">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -33,17 +32,29 @@
         app:layout_constraintStart_toStartOf="@+id/toolbar"
         app:layout_constraintTop_toTopOf="@+id/toolbar" />
 
+    <ImageView
+        android:id="@+id/imageView15"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+        app:layout_constraintStart_toStartOf="@+id/toolbar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back_arrow" />
+
     <TextView
         android:id="@+id/tv_one"
         android:layout_width="80dp"
         android:layout_height="80dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/round_button"
         android:backgroundTint="@color/colorGray"
         android:elevation="2dp"
         android:fontFamily="@font/cairo_bold"
         android:gravity="center"
         android:text="10بوك "
-        android:layout_marginTop="30dp"
         android:textColor="@color/colorBlack"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -56,7 +67,7 @@
         android:id="@+id/tv_two"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="8dp"
         android:background="@drawable/round_button"
         android:backgroundTint="@color/colorGray"
@@ -79,7 +90,7 @@
         android:id="@+id/tv_three"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="8dp"
         android:background="@drawable/round_button"
         android:backgroundTint="@color/colorGray"
@@ -102,7 +113,7 @@
         android:id="@+id/tv_four"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="8dp"
         android:background="@drawable/round_button"
         android:backgroundTint="@color/colorGray"
@@ -135,8 +146,8 @@
     <TextView
         android:id="@+id/tv_five"
         android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="30dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/round_button"
         android:backgroundTint="@color/colorGray"
         android:elevation="2dp"
@@ -146,7 +157,7 @@
         android:paddingTop="10dp"
         android:paddingEnd="5dp"
         android:paddingBottom="10dp"
-        android:text="كبير 17.21x29"
+        android:text="كبير 21x29"
         android:textColor="@color/colorBlack"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -158,8 +169,8 @@
     <TextView
         android:id="@+id/tv_six"
         android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="30dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="8dp"
         android:background="@drawable/round_button"
         android:backgroundTint="@color/colorGray"
@@ -181,8 +192,8 @@
     <TextView
         android:id="@+id/tv_seven"
         android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="30dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="8dp"
         android:background="@drawable/round_button"
         android:backgroundTint="@color/colorGray"
@@ -204,8 +215,8 @@
     <TextView
         android:id="@+id/tv_eight"
         android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="30dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="8dp"
         android:background="@drawable/round_button"
         android:backgroundTint="@color/colorGray"
@@ -216,7 +227,7 @@
         android:paddingTop="10dp"
         android:paddingEnd="5dp"
         android:paddingBottom="10dp"
-        android:text="صفير 17x22"
+        android:text="صفير 10x15"
         android:textColor="@color/colorBlack"
         android:textSize="15sp"
         app:layout_constraintEnd_toStartOf="@+id/tv_seven"
@@ -238,8 +249,8 @@
     <TextView
         android:id="@+id/tv_nine"
         android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="30dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/round_button"
         android:backgroundTint="@color/colorGray"
         android:elevation="2dp"
@@ -261,8 +272,8 @@
     <TextView
         android:id="@+id/tv_ten"
         android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="30dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="8dp"
         android:background="@drawable/round_button"
         android:backgroundTint="@color/colorGray"
@@ -284,8 +295,8 @@
     <TextView
         android:id="@+id/tv_eleven"
         android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="30dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="8dp"
         android:background="@drawable/round_button"
         android:backgroundTint="@color/colorGray"
@@ -303,8 +314,8 @@
     <TextView
         android:id="@+id/tv_tewelve"
         android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="30dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="8dp"
         android:background="@drawable/round_button"
         android:backgroundTint="@color/colorGray"
@@ -338,7 +349,7 @@
         android:id="@+id/tv_tera"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/round_button"
         android:backgroundTint="@color/colorGray"
         android:elevation="2dp"
@@ -361,7 +372,7 @@
         android:id="@+id/tv_choda"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="8dp"
         android:background="@drawable/round_button"
         android:backgroundTint="@color/colorGray"
@@ -384,7 +395,7 @@
         android:id="@+id/tv_pandra"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="8dp"
         android:background="@drawable/round_button"
         android:backgroundTint="@color/colorGray"
@@ -407,7 +418,7 @@
         android:id="@+id/tv_solla"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="8dp"
         android:background="@drawable/round_button"
         android:backgroundTint="@color/colorGray"
@@ -436,6 +447,7 @@
         app:layout_constraintStart_toStartOf="@+id/tv_solla"
         app:layout_constraintTop_toBottomOf="@+id/tv_pandra" />
 
+
     <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
@@ -454,17 +466,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
-
-
-    <ImageView
-        android:id="@+id/imageView15"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/toolbar"
-        app:layout_constraintStart_toStartOf="@+id/toolbar"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/back_arrow" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

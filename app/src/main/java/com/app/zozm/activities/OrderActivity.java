@@ -125,7 +125,7 @@ public class OrderActivity extends AppCompatActivity implements View.OnClickList
                         desiredString = bar.substring(0, 3);
 
                         if (phone.getText().toString().length() == 10) {
-                            if (desiredString.equals("051")){
+                            if (desiredString.equals("051")||desiredString.equals("٠٥١")){
 
 //                                send order mail
 
@@ -167,9 +167,10 @@ public class OrderActivity extends AppCompatActivity implements View.OnClickList
 
                             }else {
 
+                                // Please enter the correct country code
                                 new iOSDialogBuilder(this)
                                         .setTitle(this.getString(R.string.title))
-                                        .setSubtitle("من فضلك ادخل الرقم باللغة الانجليزية")
+                                        .setSubtitle("من فضلك الرجاء إدخال رمز البلد الصحيح")
                                         .setBoldPositiveLabel(true)
                                         .setCancelable(false)
                                         .setPositiveListener(this.getString(R.string.ok1), new iOSDialogClickListener() {
