@@ -125,7 +125,7 @@ public class OrderActivity extends AppCompatActivity implements View.OnClickList
                         desiredString = bar.substring(0, 3);
 
                         if (phone.getText().toString().length() == 10) {
-                            if (desiredString.equals("051")||desiredString.equals("٠٥١")){
+                            if (desiredString.equals("05")||desiredString.equals("٠٥")){
 
 //                                send order mail
 
