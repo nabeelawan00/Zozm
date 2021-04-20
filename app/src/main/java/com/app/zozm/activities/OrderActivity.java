@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
@@ -264,6 +265,16 @@ public class OrderActivity extends AppCompatActivity implements View.OnClickList
                             @Override
                             public void onClick(iOSDialog dialog) {
                                 dialog.dismiss();
+                                try {
+
+                                    Intent intent = new Intent(OrderActivity.this, MainActivity.class);
+                                    intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                                    startActivity(intent);
+                                    finish();
+
+                                } finally {
+                                    OrderActivity.this.finish();
+                                }
 
                             }
                         })
