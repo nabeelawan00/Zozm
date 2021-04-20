@@ -122,7 +122,7 @@ public class OrderActivity extends AppCompatActivity implements View.OnClickList
 
                         CharSequence foo = phone.getText();
                         String bar = foo.toString();
-                        desiredString = bar.substring(0, 3);
+                        desiredString = bar.substring(0, 2);
 
                         if (phone.getText().toString().length() == 10) {
                             if (desiredString.equals("05")||desiredString.equals("٠٥")){
