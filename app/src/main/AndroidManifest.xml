@@ -15,6 +15,7 @@
         android:roundIcon="@mipmap/logo"
         android:supportsRtl="false"
         android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
         tools:replace="android:supportsRtl">
         <activity
             android:name=".activities.MainActivity"

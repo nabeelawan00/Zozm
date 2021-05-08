@@ -27,6 +27,7 @@
         android:text="Powered by"
         android:textColor="@color/colorWhite"
         android:textSize="14sp"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/view8" />
 
@@ -34,6 +35,7 @@
         android:id="@+id/view8"
         android:layout_width="1dp"
         android:layout_height="2dp"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -45,6 +47,7 @@
         android:layout_marginBottom="6dp"
         android:fontFamily="@font/cairo_bold"
         android:text=" MegaXtudio"
+        android:visibility="gone"
         android:textColor="@color/colorWhite"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"

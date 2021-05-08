@@ -1,5 +1,5 @@
 package com.app.zozm.Utils;
 
 public class AppURL {
-    public static String url = "https://zozm.megaxtudio.com/Login/sendemail_code";
+    public static String url = "http://mobileapi.zozm.sa/index.php/Login/sendemail_code";
 }
