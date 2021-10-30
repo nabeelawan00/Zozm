@@ -34,10 +34,12 @@ public class ItemCatagoryActivity extends AppCompatActivity {
             "ملصقات وإعلانات",
             "ورق مراسلات",
             "شهادات ودروع",
-            "بروشور أو مطوم"
+            "بروشور أو مطوم",
+            "أشياء اخرى",
+            "علبة أو صندوق"
     };
 
-    int flags[] = {R.drawable.one, R.drawable.two, R.drawable.three, R.drawable.four, R.drawable.five, R.drawable.six, R.drawable.seavon, R.drawable.eight};
+    int flags[] = {R.drawable.one, R.drawable.two, R.drawable.three, R.drawable.four, R.drawable.five, R.drawable.six, R.drawable.seavon, R.drawable.eight, R.drawable.nine, R.drawable.nine};
 
 
     @Override
@@ -80,7 +82,7 @@ public class ItemCatagoryActivity extends AppCompatActivity {
     }
 
     private void setItemAdatper() {
-        itemCatagoryAdapter = new ItemCatagoryAdapter(this, flags,itemnames);
+        itemCatagoryAdapter = new ItemCatagoryAdapter(this, flags, itemnames);
         recyclerView.setAdapter(itemCatagoryAdapter);
     }
 

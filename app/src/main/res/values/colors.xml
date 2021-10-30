@@ -23,5 +23,6 @@
     <color name="colorLightGreen">#086D3D</color>
     <color name="colorPureBlack">#000000</color>
     <color name="colorSplash">#276EDA</color>
+    <color name="splashBackground">#0175E4</color>
 
 </resources>

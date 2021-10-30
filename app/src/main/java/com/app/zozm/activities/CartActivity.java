@@ -57,7 +57,7 @@ public class CartActivity extends AppCompatActivity {
         second_recyclerview.setHasFixedSize(true);
 
         firstLinearLayoutManager = new LinearLayoutManager(this, RecyclerView.HORIZONTAL, false);
-        secondLinearLayoutManager = new LinearLayoutManager(this,RecyclerView.HORIZONTAL,false);
+        secondLinearLayoutManager = new LinearLayoutManager(this, RecyclerView.HORIZONTAL, false);
         thirdLinearLayoutManager = new LinearLayoutManager(this, RecyclerView.HORIZONTAL, false);
         forthLinearLayoutManager = new LinearLayoutManager(this, RecyclerView.HORIZONTAL, false);
 
@@ -81,9 +81,9 @@ public class CartActivity extends AppCompatActivity {
         buttonNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(CartActivity.this, OrderActivity.class);
+                Intent intent = new Intent(CartActivity.this, WhatsappOrderActivity.class);
 
-
+                intent.putExtra("intentCheck", true);
                 intent.putExtra("firstArray", firstArray);
                 intent.putExtra("secondArray", secondArray);
                 intent.putExtra("thirdArray", thirdArray);

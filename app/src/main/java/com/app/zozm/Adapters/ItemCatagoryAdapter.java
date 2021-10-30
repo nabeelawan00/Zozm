@@ -16,6 +16,7 @@ import androidx.annotation.RequiresApi;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.app.zozm.R;
+import com.app.zozm.activities.AshyaAkhriActivity;
 import com.app.zozm.activities.EightCatagoryItemsActivity;
 import com.app.zozm.activities.FifthCatagoryItemsActivity;
 import com.app.zozm.activities.FirstCatagoryItemsActivity;
@@ -24,6 +25,7 @@ import com.app.zozm.activities.PaperItemActivity;
 import com.app.zozm.activities.SecondCatagoryItemsActivity2;
 import com.app.zozm.activities.SeventhCatagoryItemsActivity;
 import com.app.zozm.activities.SixthCatagoryItemsActivity;
+import com.app.zozm.activities.TenCatagoryActivity;
 import com.app.zozm.activities.ThirdCatagoryItemsActivity;
 
 public class ItemCatagoryAdapter extends RecyclerView.Adapter<ItemCatagoryAdapter.MyViewHolder> {
@@ -50,7 +52,12 @@ public class ItemCatagoryAdapter extends RecyclerView.Adapter<ItemCatagoryAdapte
     @Override
     public void onBindViewHolder(@NonNull ItemCatagoryAdapter.MyViewHolder holder, final int position) {
 
-        holder.image.setImageResource(iconsArray[position]);
+        if (position == 8) {
+            holder.image.setVisibility(View.GONE);
+        } else {
+            holder.image.setImageResource(iconsArray[position]);
+        }
+
         holder.textView.setText(itemname[position]);
         if (position == 0) {
 
@@ -70,6 +77,10 @@ public class ItemCatagoryAdapter extends RecyclerView.Adapter<ItemCatagoryAdapte
             holder.view.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#482525")));
         } else if (position == 7) {
             holder.view.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#696A2B")));
+        } else if (position == 8) {
+            holder.view.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#2A98B9")));
+        } else if (position == 9) {
+            holder.view.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#C67A27")));
         }
 
         holder.view.setOnClickListener(new View.OnClickListener() {
@@ -83,7 +94,7 @@ public class ItemCatagoryAdapter extends RecyclerView.Adapter<ItemCatagoryAdapte
 
                         break;
                     case 1:
-                        Intent intent2 = new Intent(mContext, FirstCatagoryItemsActivity .class);
+                        Intent intent2 = new Intent(mContext, FirstCatagoryItemsActivity.class);
                         mContext.startActivity(intent2);
                         break;
                     case 2:
@@ -116,6 +127,14 @@ public class ItemCatagoryAdapter extends RecyclerView.Adapter<ItemCatagoryAdapte
 
                         Intent intent8 = new Intent(mContext, EightCatagoryItemsActivity.class);
                         mContext.startActivity(intent8);
+                        break;
+                    case 8:
+                        Intent intent9 = new Intent(mContext, AshyaAkhriActivity.class);
+                        mContext.startActivity(intent9);
+                        break;
+                    case 9:
+                        Intent intent10 = new Intent(mContext, TenCatagoryActivity.class);
+                        mContext.startActivity(intent10);
                         break;
                 }
             }
